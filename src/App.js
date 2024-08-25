@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import WalletConnect from './components/WalletConnect';
+import CoinFlip from './components/CoinFlip';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Welcome to the Crypto Coinflip Game</h1>
+      <WalletConnect />
+      
+      <div className="app">
+      <CoinFlip />
+      </div>
+      {/* Add other components like CoinFlipGame here */}
     </div>
   );
-}
+};
 
 export default App;

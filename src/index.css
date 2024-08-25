@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Add this to src/App.css */
+
+body{
+  background-color: #ECDFCC;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 50px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(255, 234, 0);
+}
+
+
+/* coin flip css */
+
+/* src/styles/CoinFlip.css */
+.coin-flip-container {
+  background-color: #3C3D37;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.balance {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.transaction-history {
+  margin-top: 20px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+/* coin css */
+/* src/styles/Coin.css */
+.coin-container {
+  margin: 20px 0;
+  perspective: 1000px;
+}
+
+.coin {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.coin.flipping {
+  transform: rotateY(1800deg);
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: #f0c419;
+  color: black;
+}
+
+.heads {
+  background-color: gold;
+}
+
+.tails {
+  background-color: #E85C0D;
+  transform: rotateY(180deg);
+}
+
+
+/* src/styles/InputSection.css */
+.input-section {
+  margin: 20px 0;
+}
+
+input, select, button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #DAA520;
+  color: #000;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  color: white;
+}
+
+.warning {
+  color: rgb(234, 97, 97);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* wallet connect */
+.wallet{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.walletConnect{
+   margin-bottom: 1rem;
 }
